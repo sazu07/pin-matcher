@@ -48,18 +48,15 @@ document.getElementById('sub_mit').addEventListener('click', function(){
     const typePin = document.getElementById('typed-number').value;
     console.log(typePin);
 
-    if (matchPin=='') {
-        let success =  document.getElementById('success');
-        success.style.display='none'
-        let fail = document.getElementById('fail');
-        fail.style.display='none'
-    }
+    let success =  document.getElementById('success');
+    let fail =  document.getElementById('fail');
     if (matchPin==typePin) {
-        let success =  document.getElementById('success');
         success.style.display='block'
+        fail.style.display='none'
      
     }else {
-        let fail = document.getElementById('fail');
+        
+        success.style.display='none'
         fail.style.display='block'
     }
 
